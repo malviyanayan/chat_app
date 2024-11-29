@@ -267,6 +267,29 @@ body{
     }
 }
 
+#nav-op-disp{
+    display: none;
+}
+
+#nav-menu-clicked{
+    width: max-content;
+    background-color: #fff;
+    height: max-content;
+    border-radius: 12px;
+    /* background-color: yellow; */
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 12;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    display: none;
+}
+
 @media (max-width: 880px){
     #main-left{
         width: 35%;
@@ -293,6 +316,10 @@ body{
         display: none;
     }
     #nav-op-disp{
+        display: block;
+    }
+
+    .men-op{
         display: block;
     }
 }
