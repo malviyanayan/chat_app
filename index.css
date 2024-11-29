@@ -255,6 +255,8 @@ body{
     background-color: #003a59;
 }
 
+
+
 @media (max-width: 980px){
     #main-left{
         width: 30%;
@@ -283,5 +285,14 @@ body{
     #main-right{
         display: none;
         width: 100%;
+    }
+}
+
+@media (max-width: 470px){
+    .nav-option{
+        display: none;
+    }
+    #nav-op-disp{
+        display: block;
     }
 }
