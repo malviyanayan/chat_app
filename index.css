@@ -56,7 +56,7 @@ body{
 }
 
 .nav-option i:hover{
-    background-color: rgb(150, 255, 255);
+    background-color: rgb(204, 249, 249);
     transform: scale(1.03);
     transform: translateY(2px);
 }
@@ -73,7 +73,7 @@ body{
     width: 26%;
     height: 100%;
     /* background-color: rgb(224, 237, 250); */
-    background-color: #10B981;
+    background-color: #1f92d0;
     position: relative;
     position: relative;
     overflow-x: hidden;
@@ -86,6 +86,10 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 10px 16px 6px 12px;
+    color: #fff;
+    font-weight: 500;
+    border-bottom: 1px solid #389cd2;
+    box-shadow: 2px 2px 4px #14597e;
 }
 
 #chat-search{
@@ -95,6 +99,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 5px;
+    margin-top: 10px;
 }
 
 #chat-search>input{
@@ -103,6 +108,13 @@ body{
     padding: 2px;
     padding-left: 5px;
     border-radius: 4px;
+    width: 90%;
+    border: 1px solid transparent;
+}
+
+#chat-search>input:focus{
+    outline: none;
+    border: 1px solid black;
 }
 
 #search-btn{
@@ -114,7 +126,7 @@ body{
 .chat-contect{
     width: 94%;
     margin: 10px auto;
-    background-color: #bbaeae;
+    background-color: #0077B6;
     height: 70px;
     border-radius: 10px;
 }
@@ -190,12 +202,12 @@ body{
 
 #message{
     font-size: 1.4rem;
-    width: 91%;
+    width: max-content;
+    min-width: 400px;
     border-radius: 24px;
     height: 100%;
     border: transparent;
     color: #2e2f2f;
-    width: max-content;
 }
 
 #message:focus{
@@ -212,4 +224,64 @@ body{
     background-color: #3b0aab;
     color: #fff;
     font-weight: 600;
+}
+
+.chat-contect{
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    align-items: center;
+}
+
+.chat-contect > img{
+    height: 70%;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+.chat-contect > span{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+#chat-cont-name{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+#selected{
+    background-color: #003a59;
+}
+
+@media (max-width: 980px){
+    #main-left{
+        width: 30%;
+    }
+
+    #main-right{
+        width: 70%;
+    }
+}
+
+@media (max-width: 880px){
+    #main-left{
+        width: 35%;
+    }
+
+    #main-right{
+        width: 65%;
+    }
+}
+
+@media (max-width: 780px){
+    #main-left{
+        width: 100%;
+    }
+
+    #main-right{
+        display: none;
+        width: 100%;
+    }
 }
