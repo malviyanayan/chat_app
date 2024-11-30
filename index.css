@@ -226,23 +226,43 @@ body{
     font-weight: 600;
 }
 
+/* Perticular chat in the chat list in left box */
 .chat-contect{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.chat-contect > span{
+    height: 100%;
+    width: max-content;
+    display: flex;
     justify-content: start;
-    gap: 10px;
+    gap: 8px;
     align-items: center;
 }
 
-.chat-contect > img{
+.chat-contect >span> span{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.chat-contect >span> img{
     height: 70%;
     margin-left: 10px;
     border-radius: 50%;
 }
 
-.chat-contect > span{
-    display: flex;
+#m-time{
+    justify-content: center;
+    gap: 0;
+    margin-right: 10px;
+    line-height: 18px;
+    font-weight: 400;
+    font-size: 0.9rem;
     flex-direction: column;
-    color: #fff;
 }
 
 #chat-cont-name{

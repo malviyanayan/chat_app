@@ -13,151 +13,235 @@ hiddenMenu.addEventListener("click",()=>{
 })
 
 
-const contects = [
+
+
+const contacts = [
     {
-        personId: 101,
-        Name: "Alice",
+        contactId: 101,
+        contactName: "Alice",
         dp: "alice.jpg",
-        lastMessage: new Date("2024-11-28T10:30:00"),
-        isSeen: true
+        phone: "9876543210",
+        lastMessage: "Yes Bro",
+        isSeen: true,
+        messageTime: new Date("2024-11-28T10:30:00"),
+        isReceived: false
     },
     {
-        personId: 102,
-        Name: "Bob",
+        contactId: 102,
+        contactName: "Bob",
         dp: "bob.jpg",
-        lastMessage: new Date("2024-11-28T09:15:00"),
-        isSeen: false
+        phone: "8765432109",
+        lastMessage: "See you later!",
+        isSeen: false,
+        messageTime: new Date("2024-11-28T09:15:00"),
+        isReceived: true
     },
     {
-        personId: 103,
-        Name: "Charlie",
+        contactId: 103,
+        contactName: "Charlie",
         dp: "charlie.jpg",
-        lastMessage: new Date("2024-11-28T08:45:00"),
-        isSeen: true
+        phone: "7654321098",
+        lastMessage: "Thank you!",
+        isSeen: true,
+        messageTime: new Date("2024-11-28T08:45:00"),
+        isReceived: false
     },
     {
-        personId: 104,
-        Name: "David",
+        contactId: 104,
+        contactName: "David",
         dp: "david.jpg",
-        lastMessage: new Date("2024-11-27T18:30:00"),
-        isSeen: false
+        phone: "6543210987",
+        lastMessage: "Let's catch up.",
+        isSeen: false,
+        messageTime: new Date("2024-11-27T18:30:00"),
+        isReceived: true
     },
     {
-        personId: 105,
-        Name: "Eve",
+        contactId: 105,
+        contactName: "Eve",
         dp: "eve.jpg",
-        lastMessage: new Date("2024-11-27T17:15:00"),
-        isSeen: true
+        phone: "5432109876",
+        lastMessage: "Where are you?",
+        isSeen: true,
+        messageTime: new Date("2024-11-27T17:15:00"),
+        isReceived: false
     },
     {
-        personId: 106,
-        Name: "Frank",
+        contactId: 106,
+        contactName: "Frank",
         dp: "frank.jpg",
-        lastMessage: new Date("2024-11-27T16:00:00"),
-        isSeen: true
+        phone: "4321098765",
+        lastMessage: "Call me.",
+        isSeen: true,
+        messageTime: new Date("2024-11-27T16:00:00"),
+        isReceived: true
     },
     {
-        personId: 107,
-        Name: "Grace",
+        contactId: 107,
+        contactName: "Grace",
         dp: "grace.jpg",
-        lastMessage: new Date("2024-11-27T15:00:00"),
-        isSeen: false
+        phone: "3210987654",
+        lastMessage: "Good morning!",
+        isSeen: false,
+        messageTime: new Date("2024-11-27T15:00:00"),
+        isReceived: false
     },
     {
-        personId: 108,
-        Name: "Hannah",
+        contactId: 108,
+        contactName: "Hannah",
         dp: "hannah.jpg",
-        lastMessage: new Date("2024-11-26T20:30:00"),
-        isSeen: true
+        phone: "2109876543",
+        lastMessage: "All set.",
+        isSeen: true,
+        messageTime: new Date("2024-11-26T20:30:00"),
+        isReceived: true
     },
     {
-        personId: 109,
-        Name: "Ian",
+        contactId: 109,
+        contactName: "Ian",
         dp: "ian.jpg",
-        lastMessage: new Date("2024-11-26T19:45:00"),
-        isSeen: false
+        phone: "1098765432",
+        lastMessage: "Check your email.",
+        isSeen: false,
+        messageTime: new Date("2024-11-26T19:45:00"),
+        isReceived: false
     },
     {
-        personId: 110,
-        Name: "Jane",
+        contactId: 110,
+        contactName: "Jane",
         dp: "jane.jpg",
-        lastMessage: new Date("2024-11-26T18:20:00"),
-        isSeen: true
+        phone: "0987654321",
+        lastMessage: "See you soon.",
+        isSeen: true,
+        messageTime: new Date("2024-11-26T18:20:00"),
+        isReceived: true
     },
     {
-        personId: 111,
-        Name: "Kyle",
+        contactId: 111,
+        contactName: "Kyle",
         dp: "kyle.jpg",
-        lastMessage: new Date("2024-11-25T21:00:00"),
-        isSeen: true
+        phone: "9876501234",
+        lastMessage: "Sure thing!",
+        isSeen: true,
+        messageTime: new Date("2024-11-25T21:00:00"),
+        isReceived: false
     },
     {
-        personId: 112,
-        Name: "Laura",
+        contactId: 112,
+        contactName: "Laura",
         dp: "laura.jpg",
-        lastMessage: new Date("2024-11-25T19:10:00"),
-        isSeen: false
+        phone: "8765430123",
+        lastMessage: "Busy right now.",
+        isSeen: false,
+        messageTime: new Date("2024-11-25T19:10:00"),
+        isReceived: true
     },
     {
-        personId: 113,
-        Name: "Mike",
+        contactId: 113,
+        contactName: "Mike",
         dp: "mike.jpg",
-        lastMessage: new Date("2024-11-24T22:30:00"),
-        isSeen: true
+        phone: "7654321012",
+        lastMessage: "Let me know.",
+        isSeen: true,
+        messageTime: new Date("2024-11-24T22:30:00"),
+        isReceived: false
     },
     {
-        personId: 114,
-        Name: "Nina",
+        contactId: 114,
+        contactName: "Nina",
         dp: "nina.jpg",
-        lastMessage: new Date("2024-11-24T20:50:00"),
-        isSeen: false
+        phone: "6543210123",
+        lastMessage: "Got it!",
+        isSeen: false,
+        messageTime: new Date("2024-11-24T20:50:00"),
+        isReceived: true
     },
     {
-        personId: 115,
-        Name: "Oscar",
+        contactId: 115,
+        contactName: "Oscar",
         dp: "oscar.jpg",
-        lastMessage: new Date("2024-11-24T19:30:00"),
-        isSeen: true
+        phone: "5432101234",
+        lastMessage: "Catch you later.",
+        isSeen: true,
+        messageTime: new Date("2024-11-24T19:30:00"),
+        isReceived: false
     }
 ];
+
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+console.log(contacts[0]);
+let obj = contacts[0];
 // console.log(persons);
 
 
 const chatsBox = document.getElementById("chats");
 // Add Element in Chats in function
-
 {/* <div class="chat-contect" id="selected">
-                    <img src="images/dp.png">
                     <span>
-                        <span id="chat-cont-name">Nayan Soni</span>
-                        <span>okk bhai</span>
+                        <img src="images/dp.png">
+                        <span>
+                            <span id="chat-cont-name">Nayan Soni</span>
+                            <span>
+                                <span>okk bhai</span>
+                                <img src="images/checkmark.png" width="16">
+                            </span>
+                        </span>
+                    </span>
+
+                    <span id="m-time">
+                        <span>Monday</span>
+                        <span>12/11</span>
                     </span>
                 </div> */}
+
 
 function addChatCont(data){
     let d1 = document.createElement('div');
     d1.className = "chat-contect";
-    d1.id = "selected";
     chatsBox.appendChild(d1)
-    console.log("Working...");
-    
-    let i1 = document.createElement("img");
-    i1.src = "images/dp.png";
-    d1.appendChild(i1);
 
-    let spn1 = document.createElement('span');
-    d1.appendChild(spn1);
-    let spn2 = document.createElement('span');
-    spn2.id = "chat-cont-name";
-    spn2.innerText = data.Name;
+    let span1 = document.createElement('span');
+    let dp = document.createElement('img');
+    dp.src = "images/dp.png";
+    span1.appendChild(dp);
+
+    let span11 = document.createElement("span");
+    span1.appendChild(span11);
+
+    let spn111 = document.createElement("span");
+    spn111.id = "chat-cont-name";
+    spn111.innerText = data.contactName;
+    span11.appendChild(spn111);
     
-    let span3 = document.createElement('span');
-    span3.innerText = "okk Bro";
-    spn1.appendChild(spn2);
-    spn1.appendChild(span3);
+    let spn112 = document.createElement("span");
+    span11.appendChild(spn112);
+
+    let span1111 = document.createElement("span");
+    spn112.appendChild(span1111);
+    span1111.innerText = data.lastMessage + " ";
+    
+    let isSendImg = document.createElement("img");
+    isSendImg.src = "images/checkmark.png";
+    isSendImg.width = 16;
+    if(!data.isReceived)spn112.appendChild(isSendImg);
+
+
+    let span2 = document.createElement('span');
+    span2.id = "m-time";
+    let span21 = document.createElement("span");
+    span21.innerText = days[data.messageTime.getDay()];
+    let span22 = document.createElement("span");
+    span22.innerText = data.messageTime.getDate() + "/" + (data.messageTime.getMonth()+1);
+    span2.appendChild(span21);
+    span2.appendChild(span22);
+
+    d1.appendChild(span1);
+    d1.appendChild(span2);
 
 }
 
-// for(let x of contects){
-//     addChatCont(x)
-// }
+
+for(let x of contacts){
+    addChatCont(x)
+}
