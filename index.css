@@ -75,11 +75,12 @@ body{
     /* background-color: rgb(224, 237, 250); */
     background-color: #1f92d0;
     position: relative;
-    position: relative;
     overflow-x: hidden;
     overflow-y: hidden;
     padding-bottom: 20px;
 }
+
+
 
 #chat-cont-head{
     display: flex;
@@ -90,6 +91,11 @@ body{
     font-weight: 500;
     border-bottom: 1px solid #389cd2;
     box-shadow: 2px 2px 4px #14597e;
+}
+
+#new-chat{
+    padding: 4px;
+    cursor: pointer;
 }
 
 #chat-search{

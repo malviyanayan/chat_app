@@ -170,30 +170,10 @@ const contacts = [
 
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-console.log(contacts[0]);
 let obj = contacts[0];
-// console.log(persons);
 
 
 const chatsBox = document.getElementById("chats");
-// Add Element in Chats in function
-{/* <div class="chat-contect" id="selected">
-                    <span>
-                        <img src="images/dp.png">
-                        <span>
-                            <span id="chat-cont-name">Nayan Soni</span>
-                            <span>
-                                <span>okk bhai</span>
-                                <img src="images/checkmark.png" width="16">
-                            </span>
-                        </span>
-                    </span>
-
-                    <span id="m-time">
-                        <span>Monday</span>
-                        <span>12/11</span>
-                    </span>
-                </div> */}
 
 
 function addChatCont(data){
