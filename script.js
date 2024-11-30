@@ -241,7 +241,33 @@ function addChatCont(data){
 
 }
 
-
 for(let x of contacts){
-    addChatCont(x)
+    setTimeout(() => {
+        addChatCont(x)
+    }, 1000);
 }
+
+
+// Searching functionalities in 
+const searchCont = document.getElementById("cont-chat-search");
+searchCont.addEventListener("keyup",()=>{
+    chatsBox.innerHTML = "";
+    if(searchCont.value == ""){
+        for(let x of contacts){
+            setTimeout(() => {
+                addChatCont(x)
+            }, 1000);
+        }
+    }else{
+        for(let x of contacts){
+            let nm = x.contactName + "";
+            nm = nm.toLowerCase();
+            let sv = searchCont.value + "";
+            sv = sv.toLowerCase();
+
+            let nb = x.phone + "";
+
+            if(nm.match(sv))addChatCont(x);
+        }
+    }
+});
