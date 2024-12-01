@@ -1,28 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temp</title>
+    <title>Ha Ha</title>
     <style>
-        body{
-            /* background-color: #F9FAFB; */
-            /* background-color: #2563EB ; */
-            /* background-color: #10B981; */
-            /* background-color: #1F2937 ; */
-            /* background-color: #FCD34D ; */
+        .parent {
+            width: 100%;
+            height: 250px;
+            background-color: yellow;
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            font-size: 22px;
+            font-weight: 600;
+        }
 
+        .box {
+            width: 300px;
+            height: 200px;
+            background-color: red;
+            padding: 10px;
+        }
 
-            /* background-color: #1E1E2F; */
-            /* background-color: #4F46E5 ; */
-            /* background-color: #D946EF ; */
-            /* background-color: #E5E7EB ; */
-            background-color: #22D3EE ;
-
+        .inner {
+            width: 100px;
+            height: 90px;
+            margin: 10px;
+            background-color: blue;
         }
     </style>
 </head>
+
 <body>
-    
+    <div class="parent">
+        <div class="box" id="aa-1">
+            <div class="inner">hello11</div>
+            <div class="inner">Hii11</div>
+        </div>
+
+        <div class="box" id="aa-2">
+            <div class="inner">hello 22</div>
+            <div class="inner">Hii 22</div>
+        </div>
+
+        <div class="box" id="aa-3">
+            <div class="inner">hello 33</div>
+            <div class="inner">Hii 33</div>
+        </div>
+
+    </div>
+
+
+    <script>
+        const parent = document.querySelector('.parent');
+
+        parent.addEventListener('click', (event) => {
+            
+            const box = event.target.closest('.box');
+
+            
+            if (box) {
+                // console.log(`Inner HTML of the clicked box:`);
+                console.log( box.id);
+            }
+        });
+    </script>
 </body>
+
 </html>

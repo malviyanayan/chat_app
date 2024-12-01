@@ -137,6 +137,10 @@ body{
     border-radius: 10px;
 }
 
+.chat-contect:hover{
+    background-color: #003a59;
+}
+
 
 #main-right{
     position: fixed;
@@ -277,9 +281,6 @@ body{
     line-height: 20px;
 }
 
-#selected{
-    background-color: #003a59;
-}
 
 
 

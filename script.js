@@ -179,6 +179,7 @@ const chatsBox = document.getElementById("chats");
 function addChatCont(data){
     let d1 = document.createElement('div');
     d1.className = "chat-contect";
+    d1.id = `aa-${data.contactId}`;
     chatsBox.appendChild(d1)
 
     let span1 = document.createElement('span');
