@@ -221,6 +221,51 @@ function addChatCont(data){
 
 }
 
+function addChatContAtFirst(data){
+    let d1 = document.createElement('div');
+    d1.className = "chat-contect";
+    chatsBox.prepend(d1);
+
+    let span1 = document.createElement('span');
+    let dp = document.createElement('img');
+    dp.src = "images/dp.png";
+    span1.appendChild(dp);
+
+    let span11 = document.createElement("span");
+    span1.appendChild(span11);
+
+    let spn111 = document.createElement("span");
+    spn111.id = "chat-cont-name";
+    spn111.innerText = data.contactName;
+    span11.appendChild(spn111);
+    
+    let spn112 = document.createElement("span");
+    span11.appendChild(spn112);
+
+    let span1111 = document.createElement("span");
+    spn112.appendChild(span1111);
+    span1111.innerText = data.lastMessage + " ";
+    
+    let isSendImg = document.createElement("img");
+    isSendImg.src = "images/checkmark.png";
+    isSendImg.width = 16;
+    if(!data.isReceived)spn112.appendChild(isSendImg);
+
+
+    let span2 = document.createElement('span');
+    span2.id = "m-time";
+    let span21 = document.createElement("span");
+    span21.innerText = days[data.messageTime.getDay()];
+    let span22 = document.createElement("span");
+    span22.innerText = data.messageTime.getDate() + "/" + (data.messageTime.getMonth()+1);
+    span2.appendChild(span21);
+    span2.appendChild(span22);
+
+    d1.appendChild(span1);
+    d1.appendChild(span2);
+
+}
+
 for(let x of contacts){
     setTimeout(() => {
         addChatCont(x)
@@ -251,3 +296,39 @@ searchCont.addEventListener("keyup",()=>{
         }
     }
 });
+
+const newChat = document.getElementById("new-chat");
+const newChatCancel = document.getElementById("new-chat-cancel");
+const newChatDiv = document.getElementById("new-chat-div");
+
+newChat.addEventListener('click',(e)=>{
+    newChatDiv.style.display = "block";
+})
+
+newChatCancel.addEventListener('click',(e)=>{
+    newChatDiv.style.display = "none";
+})
+
+const addChatBtn1 = document.getElementById("sb-btn");
+addChatBtn1.addEventListener('click',(e)=>{
+    e.preventDefault();
+    let nm = document.getElementById("name");  
+    let ph = document.getElementById("phone");  
+    
+    let newCont = {
+        contactId : 384849,
+        contactName : nm.value,
+        dp : "dp.png",
+        phone : ph.value,
+        lastMessage: " ",
+        isSeen: false,
+        messageTime: new Date(Date.now()),
+        isReceived: true
+    }
+
+    addChatContAtFirst(newCont);
+
+    nm.value = ""
+    ph.value = ""
+    newChatDiv.style.display = "none";
+})

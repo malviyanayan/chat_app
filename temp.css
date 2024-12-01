@@ -3,7 +3,7 @@
     width: 100%;
     height: 300px;
     background-color: #71cdff;
-    /* display: none; */
+    display: none;
 }
 
 #new-chat-div>i{
