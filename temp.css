@@ -17,4 +17,36 @@
     text-align: center;
     margin: 10px;
     color: rgb(1, 51, 21);
+    margin-bottom: 20px;
+}
+
+#new-chat-div > div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+#new-chat-div > div > label{
+    font-size: 1.2rem;
+    margin: 6px;
+}
+
+#new-chat-div > div > input{
+    font-size: 1rem;
+    padding: 2px;
+    color: rgb(48, 48, 48);
+}
+
+#sb-btn{
+    width: 70px;
+    margin-top: 12px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background-color: #8338ec;
+    color: #fff !important;
+    font-weight: 700;
+    border: none;
+    font-size: larger;
 }
